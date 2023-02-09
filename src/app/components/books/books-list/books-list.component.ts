@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class BooksListComponent {
   @Input() books: any = [];
+
+  onSelectBook(b: any) {
+    console.log('Livre séléctionné --> ', b);
+  }
 }
