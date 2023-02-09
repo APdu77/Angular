@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  greetings="Bonjour a tous"
+  subTitleParent="My subtitle"
+  bookParent = {
+    title:"Les 1001 nuits",
+    pages:"252"
+  }
+  test="Premiere valeur"
+  count= 0 ;
+
+  inc() {
+    this.count ++;
+  }
+  logged = false;
+  typeOfPerson = '';
+
+  constructor() {
+    setTimeout(() => { this.logged = true }, 2000);
+    setTimeout(() => this.typeOfPerson = 'child', 2000);
+  }
 }
