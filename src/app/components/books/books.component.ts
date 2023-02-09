@@ -41,4 +41,5 @@ export class BooksComponent {
       avaible: true,
     },
   ];
+  selected: any;
 }

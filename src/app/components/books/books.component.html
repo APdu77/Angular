@@ -1,2 +1,8 @@
-<app-books-list [books]="books"></app-books-list>
+<app-books-list
+  (bookEmitter)="selected = $event"
+  [books]="books">
+</app-books-list>
+
+<p>{{ selected |json }}</p>
+
 <app-book-details></app-book-details>
