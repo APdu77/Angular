@@ -2,7 +2,7 @@
 <h4>{{ selected?.title }}</h4>
 
 <div *ngIf="selected">
-  <p>{{ selected.desc }}</p>
+  <p>{{ selected.desc |slice:0:10 }}...</p>
   <hr>
   <p>
     <strong>Prix:</strong> {{ selected.price |number:'1.2' }}
