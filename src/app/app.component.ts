@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  count = 0;
+  typeOfPerson = '';
+
+  constructor() {
+    setTimeout(() => this.typeOfPerson = 'child', 2000);
+  }
 }

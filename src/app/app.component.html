@@ -1,6 +1,6 @@
-<app-child1
-  (incrementCount)="count = count+1"
-  (decrementCount)="count = count-1"
-  ></app-child1>
-
-<app-child2 [count]="count"></app-child2>
+<div [ngSwitch]="typeOfPerson">
+  <h1 *ngSwitchCase="'child'">Coucou mon ami !</h1>
+  <h1 *ngSwitchCase="'woman'">Bonjour madame</h1>
+  <h1 *ngSwitchCase="'man'">Bonjour monsieur</h1>
+  <h1 *ngSwitchDefault>Bonjour à vous !</h1>
+</div>
