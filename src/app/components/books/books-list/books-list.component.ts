@@ -8,8 +8,4 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class BooksListComponent {
   @Input() books: any = [];
   @Output() bookEmitter = new EventEmitter();
-
-  onSelectBook(b: any) {
-    this.bookEmitter.emit(b);
-  }
 }
