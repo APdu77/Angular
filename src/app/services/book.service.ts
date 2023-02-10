@@ -1,6 +1,10 @@
+import { Injectable } from '@angular/core';
 import { Author } from '../models/author';
 import { Book } from '../models/book';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class BookService {
   public books = [
     new Book(
