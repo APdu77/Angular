@@ -1,0 +1,6 @@
+<app-books-list 
+    [books]="books" 
+    (bookEmitter)="selected = $event">
+</app-books-list>
+
+<app-book-details [book]="selected"></app-book-details>
