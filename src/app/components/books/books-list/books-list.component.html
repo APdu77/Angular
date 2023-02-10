@@ -1,5 +1,0 @@
-<ol>
-    <li *ngFor="let book of books; let i = index" (click)="bookEmitter.emit(book) ;onSelectBook(book)">
-      <a href="#details"> {{ book.title }} ({{ book.author }}) </a> 
-    </li>
-  </ol>
