@@ -5,7 +5,7 @@ import { Movie } from '../models/movie';
   providedIn: 'root'
 })
 export class MovieService {
-  public movies: Movie[] = [
+  private _movies: Movie[] = [
     new Movie(
       crypto.randomUUID(),
       'Il était une fois',
@@ -26,11 +26,15 @@ export class MovieService {
     ),
   ];
 
+  public get movies() {
+    return [ ...this._movies ];
+  }
+
   public create(movie: Movie) {
-    this.movies.unshift(movie);
+    this._movies.unshift(movie);
   }
 
   public delete(index: number) {
-    this.movies.splice(index, 1);
+    this._movies.splice(index, 1);
   }
 }
