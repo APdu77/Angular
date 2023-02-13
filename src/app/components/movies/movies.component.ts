@@ -9,5 +9,6 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class MoviesComponent {
   movies: Movie[] = this._movieService.movies;
+  selected!: Movie;
   constructor(private _movieService: MovieService) {}
 }

@@ -1,1 +1,12 @@
-<p>movie-details works!</p>
+<div *ngIf="movie" class="card">
+  <img [src]="movie.img">
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.title }}</h5>
+    <p class="card-text">{{ movie.desc }}</p>
+  </div>
+</div>
+
+<div *ngIf="!movie" class="alert alert-danger alert-dismissible">
+  <h4 class="alert-heading text-center">Pas de film séléctionné !</h4>
+  <button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
