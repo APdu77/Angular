@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
 import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component';
+import { MovieFormComponent } from './components/movies/movie-form/movie-form.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MovieDetailsComponent } from './components/movies/movie-details/movie-d
     MoviesComponent,
     MovieListComponent,
     MovieDetailsComponent,
+    MovieFormComponent,
   ],
   imports: [
     BrowserModule,
