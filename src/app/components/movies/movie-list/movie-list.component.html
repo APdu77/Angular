@@ -1,5 +1,6 @@
 <ul class="list-group" *ngIf="movies">
   <li
+    (click)="movieSelected.emit(movie)"
     *ngFor="let movie of movies"
     class="list-group-item">
     {{ movie.title }}

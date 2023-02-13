@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 
 @Component({
@@ -8,4 +8,5 @@ import { Movie } from 'src/app/models/movie';
 })
 export class MovieListComponent {
   @Input() movies!: Movie[];
+  @Output() movieSelected = new EventEmitter<Movie>();
 }
