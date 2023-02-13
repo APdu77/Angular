@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Movie } from 'src/app/models/movie';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-movies',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
-
+  movies: Movie[] = this._movieService.movies;
+  constructor(private _movieService: MovieService) {}
 }

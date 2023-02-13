@@ -1,1 +1,7 @@
-<p>movie-list works!</p>
+<ul class="list-group" *ngIf="movies">
+  <li
+    *ngFor="let movie of movies"
+    class="list-group-item">
+    {{ movie.title }}
+  </li>
+</ul>
