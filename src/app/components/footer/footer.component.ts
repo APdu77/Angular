@@ -3,12 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-    <p>
-      footer works!
-    </p>
+    <footer class="fs-6 text-center">
+      <p>Copyright ...</p>
+    </footer>
   `,
-  styles: [
-  ]
 })
 export class FooterComponent {
 
