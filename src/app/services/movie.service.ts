@@ -29,4 +29,8 @@ export class MovieService {
   public create(movie: Movie) {
     this.movies.unshift(movie);
   }
+
+  public delete(index: number) {
+    this.movies.splice(index, 1);
+  }
 }

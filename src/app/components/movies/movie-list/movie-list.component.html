@@ -1,8 +1,11 @@
 <ul class="list-group" *ngIf="movies">
   <li
     (click)="movieSelected.emit(movie)"
-    *ngFor="let movie of movies"
-    class="list-group-item">
-    {{ movie.title }}
+    *ngFor="let movie of movies; index as i"
+    class="list-group-item d-flex justify-content-between">
+    <span>{{ movie.title }}</span>
+    <button
+      class="btn"
+      (click)="$event.stopPropagation(); onDelete(i)">✖︎</button>
   </li>
 </ul>
