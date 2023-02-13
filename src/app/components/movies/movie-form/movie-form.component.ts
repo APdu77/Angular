@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Movie } from 'src/app/models/movie';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-movie-form',
@@ -7,10 +9,19 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./movie-form.component.css']
 })
 export class MovieFormComponent {
+
+  constructor(private _movieService: MovieService) {}
+  
   onSubmit(form: NgForm) {
     if (form.valid) {
-      // Ajouter le film à la liste existante
-      console.log(form.value);
+      const movie = new Movie(
+        crypto.randomUUID(),
+        form.value.title,
+        form.value.desc,
+        form.value.img,
+      );
+      this._movieService.create(movie);
+      form.reset();
     }
   }
 }

@@ -25,4 +25,8 @@ export class MovieService {
       'http://placeimg.com/640/480/business'
     ),
   ];
+
+  public create(movie: Movie) {
+    this.movies.unshift(movie);
+  }
 }
