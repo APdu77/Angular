@@ -1,9 +1,9 @@
 <form #formAddMovie="ngForm" (ngSubmit)="onSubmit(formAddMovie)">
   <input
     required
-    ngModel
     name="title"
     type="text"
+    [(ngModel)]="movie.title"
     placeholder="Titre du film"
     autocomplete="off">
   <textarea 
@@ -12,6 +12,7 @@
     name="desc"
     cols="30"
     rows="4"
+    [(ngModel)]="movie.desc"
     placeholder="Description du film"
     autocomplete="off"></textarea>
   <input
@@ -19,7 +20,16 @@
     ngModel
     name="img"
     type="text"
+    [(ngModel)]="movie.img"
     placeholder="Lien de la jacket du film">
-  <button type="submit">Ajouter</button>
+  <button type="submit">
+    {{ toEdit? 'Mettre à jour' : 'Créer un film' }}
+  </button>
   <button type="reset">Effacer</button>
+  <button
+    *ngIf="toEdit"
+    (click)="loadCreationForm()"
+    type="button">
+    Mode création
+  </button>
 </form>

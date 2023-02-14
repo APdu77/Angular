@@ -12,4 +12,8 @@ export class MoviesComponent {
   selected!: Movie;
 
   constructor(private _movieService: MovieService) {}
+
+  refreshList() {
+    this.movies = this._movieService.movies;
+  }
 }
