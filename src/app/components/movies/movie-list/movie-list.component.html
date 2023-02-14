@@ -4,8 +4,15 @@
     *ngFor="let movie of movies; index as i"
     class="list-group-item d-flex justify-content-between">
     <span>{{ movie.title }}</span>
-    <button
-      class="btn"
-      (click)="$event.stopPropagation(); onDelete(i)">✖︎</button>
+    <div class="buttons">
+      <button
+        class="btn"
+        (click)="$event.stopPropagation(); onDelete(i)">✖︎</button>
+      <button
+        class="btn"
+        (click)="movie.isEditable = !movie.isEditable">
+        {{ movie.isEditable? '✔︎' : '✎' }}
+      </button>
+    </div>
   </li>
 </ul>

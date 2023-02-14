@@ -15,5 +15,6 @@ export class MovieListComponent {
 
   onDelete(i: number) {
     this._movieService.delete(i);
+    this.movies = this._movieService.movies;
   }
 }

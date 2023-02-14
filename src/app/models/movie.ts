@@ -4,5 +4,6 @@ export class Movie {
     public title: string,
     public desc: string,
     public img: string,
+    public isEditable = false,
   ) {}
 }

@@ -1,8 +1,25 @@
 <div *ngIf="movie" class="card">
   <img [src]="movie.img">
   <div class="card-body">
-    <h5 class="card-title">{{ movie.title }}</h5>
-    <p class="card-text">{{ movie.desc }}</p>
+    <h5
+      #title
+      (blur)="movie.title = title.innerText"
+      [contentEditable]="movie.isEditable"
+      class="card-title">
+      {{ movie.title }}
+    </h5>
+    <input
+      *ngIf="movie.isEditable"
+      class="card-text"
+      [(ngModel)]="movie.img"
+      type="text">
+    <p
+      #desc
+      (blur)="movie.desc = desc.innerText"
+      [contentEditable]="movie.isEditable"
+      class="card-text">
+      {{ movie.desc }}
+    </p>
   </div>
 </div>
 
