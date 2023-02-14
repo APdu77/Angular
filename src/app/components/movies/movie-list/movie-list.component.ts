@@ -13,8 +13,8 @@ export class MovieListComponent {
 
   constructor(private _movieService: MovieService) {}
 
-  onDelete(i: number) {
-    this._movieService.delete(i);
-    this.movies = this._movieService.movies;
+  onDelete(id?: string) {
+    if (id) this._movieService.delete(id);
+    //this.movies = this._movieService.movies;
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from 'src/app/services/movie.service';
 
@@ -8,12 +8,20 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
-  movies: Movie[] = this._movieService.movies;
+  movies: Movie[] = [];
   selected!: Movie;
 
   constructor(private _movieService: MovieService) {}
 
+  ngOnInit(): void {
+    this._movieService
+    .findAll()
+    .subscribe(movies => {
+      this.movies = movies;
+    });
+  }
+
   refreshList() {
-    this.movies = this._movieService.movies;
+    this._movieService.findAll();
   }
 }

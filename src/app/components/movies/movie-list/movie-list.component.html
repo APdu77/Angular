@@ -1,13 +1,13 @@
 <ul class="list-group" *ngIf="movies">
   <li
     (click)="movieSelected.emit(movie)"
-    *ngFor="let movie of movies; index as i"
+    *ngFor="let movie of movies"
     class="list-group-item d-flex justify-content-between">
     <span>{{ movie.title }}</span>
     <div class="buttons">
       <button
         class="btn"
-        (click)="$event.stopPropagation(); onDelete(i)">✖︎</button>
+        (click)="$event.stopPropagation(); onDelete(movie.id)">✖︎</button>
       <button
         class="btn"
         (click)="movie.isEditable = !movie.isEditable">
