@@ -1,0 +1,9 @@
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 20px;
+  }
+  
+  form > * {
+    margin-bottom: 8px;
+  }

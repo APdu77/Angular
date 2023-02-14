@@ -1,0 +1,46 @@
+<form #formAddMovie="ngForm" (ngSubmit)="onSubmit(formAddMovie)">
+  <input
+    required
+    ngModel
+    name="title"
+    type="text"
+    placeholder="Title"
+    autocomplete="off">
+  <input
+    required
+    ngModel
+    name="directorFn"
+    type="text"
+    placeholder="Director's firstname"
+    autocomplete="off">
+  <input
+    required
+    ngModel
+    name="directorLn"
+    type="text"
+    placeholder="Director's lastname"
+    autocomplete="off">
+  <textarea
+    required
+    ngModel
+    name="synopsis"
+    cols="30"
+    rows="4"
+    placeholder="Synopsis"
+    autocomplete="off"></textarea>
+  <input
+    required
+    ngModel
+    name="imageLink"
+    type="text"
+    placeholder="Jacket URL">
+  <input
+    required
+    ngModel
+    name="year"
+    type="number"
+    placeholder="Year"
+    autocomplete="off">
+  <button type="submit">Ajouter</button>
+  <button type="reset">Effacer</button>
+</form>

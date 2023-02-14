@@ -1,0 +1,15 @@
+<ul class="list-group" *ngIf="movies">
+  <li
+  (click)="movieSelected.emit(movie)"
+  *ngFor="let movie of movies, index as i"
+    class="list-group-item">
+    <a href="#details" (click)="movieSelected.emit(movie)">{{ movie.title }}</a>
+    
+    <button type="button" class="btn-close btn btn-danger" (click)="$event.stopPropagation(); remove(movie)"></button>
+    <button
+        class="btn"
+        (click)="movie.isEditable = !movie.isEditable">
+        {{ movie.isEditable? '✔︎' : '✎' }}
+      </button>
+  </li>
+</ul>

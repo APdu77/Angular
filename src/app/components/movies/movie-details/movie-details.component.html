@@ -1,0 +1,33 @@
+<div *ngIf="movie" class="card">
+  <img [src]="movie.imageLink">
+  <div class="card-body">
+    <h5 
+      #title
+      (blur)="movie.title = title.innerText"
+      [contentEditable]="movie.isEditable"
+      class="card-title">
+      {{ movie.title }}</h5>
+      <h6 
+      #title
+      (blur)="movie.title = title.innerText"
+      [contentEditable]="movie.isEditable"
+      class="card-title">
+      {{ movie.year }} by {{ movie.director.fn }} {{ movie.director.ln }}</h6>
+    <p 
+      #synopsis
+      (blur)="movie.synopsis = synopsis.innerText"
+      [contentEditable]="movie.isEditable"
+      class="card-text">
+      {{ movie.synopsis }}</p>
+    <input
+      *ngIf="movie.isEditable"
+      class="card-text"
+      [(ngModel)]="movie.imageLink"
+      type="text">
+  </div>
+</div>
+
+<div *ngIf="!movie" class="alert alert-danger alert-dismissible">
+  <h4 class="alert-heading text-center">Pas de film séléctionné !</h4>
+  <button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
