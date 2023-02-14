@@ -12,8 +12,14 @@ export class MoviesListComponent {
   @Output() movieSelected = new EventEmitter<Movie>();
 
   constructor(private _movieService : MovieService) {}
-  remove(movie : Movie) {
-    this._movieService.removeMovie(movie);
+  //deletebyIndex
+  onDelete(index : number) {
+    this._movieService.deleteByIndex(index);
+    this.movies = this._movieService.movies;
+  }
+  //deletebyMovie
+  onDelete2(movie : Movie) {
+    this._movieService.deleteByMovie(movie);
     this.movies = this._movieService.movies;
   }
 }

@@ -6,7 +6,7 @@ import { Movie } from '../models/movie';
   providedIn: 'root'
 })
 export class MovieService {
-  movies = [
+  _movies = [
     new Movie(
       crypto.randomUUID(),
       "Green Book",
@@ -33,13 +33,23 @@ export class MovieService {
     )
   ];
 
+  public get movies() {
+    return [ ...this._movies ];
+  }
+
   public addMovie (movieToAdd : Movie) {
-    this.movies.push(movieToAdd);
+    this._movies.push(movieToAdd);
     //this.movies.unshift(movieToAdd); pour ajouter le film au debut de ma liste
     console.log(this.movies.indexOf(movieToAdd));
   }
 
-  public removeMovie (movieToRemove : Movie) {
-    this.movies.splice(this.movies.indexOf(movieToRemove),1);
+  //index en parametre
+  public deleteByIndex(index: number) {
+    this._movies.splice(index, 1);
+  }
+
+  //movie en parametre
+  public deleteByMovie (movieToRemove : Movie) {
+    this._movies.splice(this.movies.indexOf(movieToRemove),1);
   }
 }
