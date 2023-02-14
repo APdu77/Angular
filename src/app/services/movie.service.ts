@@ -33,6 +33,7 @@ export class MovieService {
     )
   ];
 
+  //protection de l'objet _movies, qui devient accessible en lecture uniquement depuis l'exterieur
   public get movies() {
     return [ ...this._movies ];
   }
