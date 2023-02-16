@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "id": "08c6a032-38bd-4cf7-986b-24ba7478c818",
+      "text": "Faire le ménage",
+      "done": false,
+      "isEditable": false
+    },
+    {
+      "id": "b3be5c79-02b0-4b3b-8299-4746aee2ca1c",
+      "text": "Acheter des tomates",
+      "done": false,
+      "isEditable": false
+    },
+    {
+      "id": "95dd2963-8910-4a36-aee8-5b266388ca24",
+      "text": "Courir 200 mètres",
+      "done": false,
+      "isEditable": false
+    },
+    {
+      "text": "Reparation",
+      "id": "a0w_qW9",
+      "done": false
+    },
+    {
+      "text": "cvs",
+      "id": "trWpae0",
+      "done": false,
+      "isEditable": false
+    },
+    {
+      "text": "Reparations",
+      "id": "oPk33G_",
+      "done": false,
+      "isEditable": false
+    }
+  ]
+}
