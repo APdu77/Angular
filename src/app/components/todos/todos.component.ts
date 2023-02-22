@@ -9,7 +9,7 @@ import { TodoService } from 'src/app/services/todo.service';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
-export class TodosComponent implements OnInit /*impplementation facultative*/ {
+export class TodosComponent implements OnInit /*implementation facultative*/ {
   todos$: BehaviorSubject<Todo[]> = this._todoService.todos$;
   toCreate: Todo = {};
 

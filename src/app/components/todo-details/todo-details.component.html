@@ -1,0 +1,10 @@
+<h3> ID : {{todoId}} </h3>
+<button routerLink = "/todos/hello"> /todos/:id </button>
+<button
+  routerLink="/todos/hello"
+  [queryParams]="{
+    name: 'jaco',
+    age: 67
+  }" fragment="cocojaco">
+  /todos/:id?name=jaco#cocojaco
+</button>

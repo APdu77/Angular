@@ -1,5 +1,7 @@
 <h1>Ma liste de tâche</h1>
 
+<router-outlet></router-outlet>
+
 <div class="todos">
 
     <div class="form-add-todo">
@@ -35,6 +37,12 @@
                 class="bt-close bt-danger" 
                 (click)="onDelete(todo.id)">
                 Remove
+            </button>
+            <button 
+                *ngIf="!todo.isEditable"
+                class="bt-details" 
+                [routerLink]="['/todos', todo.id]">
+                Details
             </button>
         </div>
 

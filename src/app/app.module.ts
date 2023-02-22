@@ -9,6 +9,11 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { OneComponent } from './components/one/one.component';
+import { TwoComponent } from './components/two/two.component';
+import { AboutComponent } from './components/about/about.component';
+import { TeamsComponent } from './components/teams/teams.component';
+import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 
 
 @NgModule({
@@ -17,7 +22,12 @@ import { TodosComponent } from './components/todos/todos.component';
     HomeComponent,
     TodosComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    OneComponent,
+    TwoComponent,
+    AboutComponent,
+    TeamsComponent,
+    TodoDetailsComponent
   ],
   imports: [
     BrowserModule,
